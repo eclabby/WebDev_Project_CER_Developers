@@ -6,7 +6,7 @@
 .main{
     width: 100%;
     background-color: black; /* #0a141f */
-    background: linear-gradient(to top, rgba(0,0,0,0.95)50%,rgba(0,0,0,0.95)50%), url(../media/marble.jpg);
+    background: linear-gradient(to top, rgba(0,0,0,0.9)50%,rgba(0,0,0,0.9)50%), url(../media/marble.jpg);
     background-position: center;
     background-size: cover;
     height: 109vh;
@@ -81,7 +81,7 @@
     background: transparent;
     margin-top: 25px;
     color: white;
-    border-bottom: 1px solid rgb(192, 38, 38);
+    border-bottom: 1px solid rgb(255, 255, 255);
     border-right: none;
     border-left: none;
     border-top: none;
@@ -93,7 +93,7 @@
 .btn{
     width: 100px;
     height: 35px;
-    background: rgb(192, 38, 38);
+    background: rgb(255, 255, 255);
     border: none;
     margin-top: 25px;
     color: black;
@@ -145,7 +145,7 @@
 .content .cn{
     width: 160px;
     height: 40px;
-    background: rgb(192, 38, 38);
+    background: rgb(255, 255, 255);
     border: none;
     margin-top: 15px;
     margin-bottom: 10px;
