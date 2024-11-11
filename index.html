@@ -1,73 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wheels on Fire | Luxury and Prestige Cars</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <div class="main">
-        <div class="navbar">
-            <div class="icon">
-                <h2 class="logo">Wheels on Fire</h2>
-            </div>
-
-            <div class="menu">  
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="pages/about.html">About</a></li>
-                    <li><a href="pages/contact.html">Contact</a></li>
-                    <li><a href="pages/stock.html">Our&nbsp;Stock</a></li>
-                    <li><a href="pages/tos.html">Terms&nbsp;of&nbsp;Service</a></li>
-                </ul>
-            </div>
-
-            <div class="search">
-                <input class="srch" type="search" name="" placeholder="Search...">
-                <a href="#"> <button class="btn">Search</button></a>
-            </div>
-
+    <nav>
+        <div class="logo">Wheels on Fire</div>
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="stock.html">STOCK</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+        <div class="search-bar">
+            <input type="text" placeholder="Search...">
+            <a href="#"><button>Search</button></a>
         </div>
-        <div class="content">
-            <h1>Suppliers of luxury <br>and prestige <br>cars</h1>
-            <p class="par">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate, necessitatibus magnam. 
-                Eveniet quos perferendis animi non aliquid, iure adipisci nihil laudantium asperiores maxime aut 
-                voluptatum corporis odit hic esse mollitia.
-            </p>
+    </nav>
 
-            <button class="cn"><a href="pages/stock.html">Current Stock</a></button>
-            
-            <div class="container">
-                <div class="wrapper">
-                    <div class="card">
-                        <a href="pages/stock.html"><img src="media/audi.jpg" alt="Audi"></a>
-                        <h2>2024 Audi</h2>
-                        <p>AUDI SUV, LOW MILES, HUGE
-                            <br> SPEC, IVORY LEATHER, FULL SERVICE
-                            <br> HISTORY...
-                        </p>
-                        <p class="price">$34,995</p>
-                    </div>
-                </div>
+    <div class="car-slider"> <!--background-images go here-->
+        <div class="car-slides">
+            <div class="car-slide"> 
+                <img src="/media/mclaren-p1-7746386_1280.jpg" alt="">
+                <div class="car-slide-text"><a href="#">Browse vehicles</a></div> 
+            </div> 
+            <div class="car-slide"> 
+                <img src="/media/porsche-8182100_1280.jpg" alt=""> 
+                <div class="car-slide-text"><a href="#">Contact Us</a></div>
+            </div>
+            <div class="car-slide"> 
+                <img src="/media/car-5548242_1280.jpg" alt=""> 
+                <div class="car-slide-text"><a href="#">Discover your dream car</a></div>
             </div>
         </div>
-        <footer>
-            <div class="container">
-                <div class="wrapper">
-                    <div class="item">
-                        <ul>
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="pages/about.html">About</a></li>
-                            <li><a href="pages/contact.html">Contact</a></li>
-                            <li><a href="pages/stock.html">Our&nbsp;Stock</a></li>
-                            <li><a href="pages/tos.html">Terms&nbsp;of&nbsp;Service</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </footer>
+        <button class="prev">&#10094;</button>
+        <button class="next">&#10095;</button>
     </div>
+
+    <div class="info-section">
+        <div class="info-text">
+            <h2>About Our Dealership</h2>
+            <p>Wheels on Fire is a car dealership founded in 2012 by entrepreneur and car businessman John O'Reilly. 
+                Wheels on Fire is driven by their passion for these well-tuned machines and wants to help people find
+                the car of their dreams. Discover our fabulous collection of cars here at Wheels on Fire.</p>
+        </div>
+        <div class="info-image">
+            <img src="/media/porsche-8182100_1280.jpg" alt="Porsche">
+        </div>
+    </div>
+
+    <div class="popular-cars-title">
+        <h2>Discover Our Vehicles</h2>
+    </div>
+    <div class="popular-cars-section">
+        <div class="popular-car-item">
+            <img src="/media/z4.jpg" alt="">
+            <h2>BUGATTI</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum soluta nostrum adipisci quas repellendus 
+                iusto labore explicabo.</p>
+        </div>
+        <div class="popular-car-item">
+            <img src="/media/z4.jpg" alt="">
+            <h2>KOENIGSEGG</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum soluta nostrum adipisci quas repellendus 
+                iusto labore explicabo. Blanditiis dolor non rem tenetur neque! Amet, eius dolorum.</p>
+        </div>
+        <div class="popular-car-item">
+            <img src="/media/z4.jpg" alt="">
+            <h2>FERRARI</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum soluta iusto labore explicabo. Blanditiis 
+                tenetur neque! Amet, eius asperiores illum error similique 
+                dolorum.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>Wheels on Fire | Car Dealership | 2024</p>
+    </footer>
+
+    <script src="scripts.js"></script>
 </body>
+
 </html>
