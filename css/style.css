@@ -203,18 +203,18 @@ footer {
 .car-container {
     display: flex; 
     flex-wrap: wrap;
-    justify-content: flex-start;/*aligns on the new line form the left*/
+    justify-content: center;
     width: 100%;
 }
 
 .car-card {
     background-color: white;
-    border: 1px solid white;
-    border-radius: 5px;
-    margin: 17px;
-    padding: 22px;
+    border: 1px solid grey;
+    /*border-radius: 5px;*/
+    margin: 10px;
+    padding: 20px;
     width: calc((100%/6) - 10px);/* 6 cards per line*/
-    box-shadow: 0 2px 5px darkcyan;
+    /*box-shadow: 0 2px 5px #0a141f;*/
     transition: transform 0.2s;
 }
 
@@ -246,11 +246,10 @@ footer {
 .car-card img {
     width: 100%;
     height: auto;
-    border-radius: 5px;
 }
 
 .car-card h2 {
-    font-size: 1.1rem; /* font size for heading 2 (car name) */
+    font-size: 1.2rem; /* font size for heading 2 (car name) */
     margin: 10px 0;
 }
 
