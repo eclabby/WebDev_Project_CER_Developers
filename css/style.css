@@ -210,11 +210,11 @@ footer {
 .car-card {
     background-color: white;
     border: 1px solid grey;
-    /*border-radius: 5px;*/
+    border-radius: 5px;
     margin: 10px;
     padding: 20px;
-    width: calc((100%/6) - 10px);/* 6 cards per line*/
-    /*box-shadow: 0 2px 5px #0a141f;*/
+    width: calc((100%/6) - 10px); /* 6 cards per line*/
+    box-shadow: 0 2px 5px #0a141f;
     transition: transform 0.2s;
 }
 
