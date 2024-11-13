@@ -149,7 +149,6 @@ nav .search-bar input {
     display: flex;
     flex-direction: column;
     justify-content: center;
-
     font-size: 1.2em;
 }
 
@@ -174,7 +173,7 @@ nav .search-bar input {
     text-align: center;
 }
 
-.popular-cars-section {
+.popular-cars-section { /* discovery-section rename? */
     display: flex;
     justify-content: space-around;
     padding: 20px 80px;
@@ -223,7 +222,7 @@ footer {
 }
 
 .car-card:hover img {
-    transform: scale(1.1); /* scales up when hovered */
+    transform: scale(1.1);
 }
 
 .car-card h2, 
@@ -234,7 +233,7 @@ footer {
 
 .price  {
     font-size: 1.8em;
-    font-weight: bolder;
+    font-weight: bold;
 }
 
 .car-card-text {
@@ -253,7 +252,7 @@ footer {
 /* Medium to large devices (desktops) */
 @media (min-width: 801px) {
     .car-card {
-        width: calc((100%/4) - 10px); /* 6 cards per line */
+        width: calc((100%/4) - 10px); /* 6 cards per line (changed to 4 temporarily */
     }
 }
 
@@ -272,3 +271,28 @@ footer {
 }
 
 /*robert part ends*/
+
+/* BAD DESIGN CONTACT REDO */
+
+.contact-section {
+    display: flex;
+    height: 50vh;
+    justify-content: center;
+}
+
+.contact-title {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    justify-content: center;
+    padding: 50px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    justify-content: center;
+}
+
+/* BAD DESIGN CONTACT REDO */
