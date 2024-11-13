@@ -270,4 +270,9 @@ footer {
     transition: transform 0.2s;
 }
 
+footer a img {
+  width: 40px; /* Adjust size as needed */
+  height: auto;
+}
+
 /*robert part ends*/
