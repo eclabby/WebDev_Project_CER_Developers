@@ -140,12 +140,15 @@ nav .search-bar input {
 
 .info-section {
     display: flex;
+    flex-wrap: wrap;
     height: 100vh;
+    justify-content: center;
 }
 
-.info-text {
-    width: 45%;
-    padding: 50px;
+.info-text,
+.info-image {
+    width: 100%;
+    
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -156,17 +159,18 @@ nav .search-bar input {
     margin-top: 0;
 }
 
-.info-image {
-    width: 45%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 .info-image img {
     max-width: 100%;
     height: auto;
 }
+
+@media (min-width: 768px) { /* For larger screens must figure out screen size */
+    .info-text,
+    .info-image
+    {
+        width: 45%;
+    }
+ }
 
 .popular-cars-title {
     font-size: 2em;
