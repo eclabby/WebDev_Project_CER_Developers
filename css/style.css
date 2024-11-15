@@ -9,9 +9,8 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #0a141f;
-    /* #302823 */
-    padding: 10px 20px;
+    background-color: #0a141f; /* #302823 */
+    padding: 20px;
 }
 
 nav .logo {
@@ -21,42 +20,121 @@ nav .logo {
     font-weight: bold;
 }
 
+.menu-check {
+    display: none;
+}
+
+.menu-label {
+    display: none;
+    cursor: pointer;
+    z-index: 6;
+}
+
+.menu-label div {
+    width: 33px;
+    height: 4px;
+    background-color: white;
+    margin: 5px;
+    border-radius: 5px;
+}
+
 nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
     flex-grow: 1;
-    margin: 0;
-    padding: 0;
 }
 
 nav ul li {
-    margin: 0 20px;
+    margin: 0 2px;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
     font-size: 1.2em;
-    
 }
 
 nav ul li a {
-    transition: 0.2s ease-in-out;
+    transition: 0.3s ease;
+    padding: 10px 25px;
+    border: solid 1px transparent;
 }
 
 nav ul li a:hover {
-    color: blue;
-    text-decoration: underline;
+    border: solid 1px white;
 }
 
-nav .search-bar {
+.search-bar {
     margin-left: auto;
+    border-radius: 5px;
 }
 
-nav .search-bar input {
-    padding: 5px;
-    font-size: 1em;
+.search-bar input,
+.search-bar button {
+    padding: 10px;
+    border: solid 2px gray;
+}
+
+.search-bar button {
+    background-color: #302823;
+    color: white;
+    cursor: pointer;
+}
+
+.overlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 4;
+}
+
+@media screen and (max-width: 811px) {
+    .menu-label {
+        display: block;
+    }
+
+    .search-bar {
+        display: none;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        position: absolute;
+        height: 100vh;
+        width: 100%;
+        top: 0;
+        left: 0;
+        background-color: black;
+        z-index: 5;
+    }
+
+    nav ul li {
+        padding: 20px;
+    }
+
+    .menu-check:checked~ul {
+        display: flex;
+    }
+
+    .menu-check:checked~.overlay {
+        display: block;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    nav ul {
+        width: 33%;
+        left: auto;
+        right: 0;
+    }
 }
 
 .car-slider {
@@ -121,31 +199,27 @@ nav .search-bar input {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.6);
+    font-size: 1.5em;
     color: white;
     border: none;
-    padding: 10px;
+    padding: 20px;
     cursor: pointer;
+    z-index: 4;
 }
 
 .prev {
-    left: 10px;
+    left: 0;
 }
 
 .next {
-    right: 10px;
+    right: 0;
 }
 
 .info-section {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-
-    /* 
-    Causing mobile problems
-    100vh looks good on desktop
-    but on mobile 100vh isn't enough space when elements stack
-    */
     padding: 40px 0;
     overflow-y: auto;
 }
@@ -187,7 +261,6 @@ nav .search-bar input {
 }
 
 .popular-cars-section {
-    /* discovery-section rename? */
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -230,7 +303,7 @@ footer {
 
 .car-card {
     background-color: white;
-    border: 1px solid grey;
+    border: 1px solid gray;
     margin: 20px;
     padding: 0;
     width: 100%;
@@ -271,27 +344,36 @@ footer {
     color: black;
 }
 
-/* Medium to large devices (desktops) */
-@media (min-width: 801px) {
+/* Large devices (desktops) */
+@media (min-width: 900px) {
     .car-card {
+        /* 4 cards per line */
+        width: calc((100%/4) - 60px);
+
+    }
+}
+
+/* Medium devices (laptops) */
+@media (min-width: 812px) {
+    .car-card {
+        /* 3 cards per line */
         width: calc((100%/3) - 60px);
-        /* 6 cards per line (changed to 4 temporarily */
     }
 }
 
 /* Tablets */
-@media (max-width: 800px) and (min-width: 600px) {
+@media (max-width: 811px) and (min-width: 600px) {
     .car-card {
-        width: calc((100% / 4) - 10px);
-        /* 4 cards per line */
+        /* 2 cards per line */
+        width: calc((100% / 2.5));
     }
 }
 
 /* Phones */
 @media (max-width: 600px) {
     .car-card {
-        flex: 0 1 calc(100% - 20px);
         /* 1 card per line */
+        flex: 0 1 calc(100% - 20px);
     }
 }
 

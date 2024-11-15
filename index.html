@@ -6,35 +6,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wheels on Fire | Luxury and Prestige Cars</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
 <body>
     <nav>
         <div class="logo">Wheels on Fire</div>
+        <input id="menu" class="menu-check" type="checkbox">
+        <label class="menu-label" for="menu">
+            <div></div>
+            <div></div>
+            <div></div>
+        </label>
         <ul>
-            <li><a href="index.html">HOME</a></li>
-            <li><a href="pages/stock.html">STOCK</a></li>
-            <li><a href="pages/about.html">ABOUT</a></li>
-            <li><a href="pages/contact.html">CONTACT</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="pages/stock.html">Stock</a></li>
+            <li><a href="pages/about.html">About</a></li>
+            <li><a href="pages/contact.html">Contact</a></li>
         </ul>
         <div class="search-bar">
-            <input type="text" placeholder="Search...">
-            <a href="#"><button>Search</button></a>
+            <input type="text" placeholder="Search">
+            <a href="#"><button><i class="fas fa-search fa-lg"></i></button></a>
         </div>
+        <div class="overlay"></div>
     </nav>
 
     <div class="car-slider"> <!--background-images go here-->
         <div class="car-slides">
-            <div class="car-slide"> 
-                <img src="/media/mclaren-p1-7746386_1280.jpg" alt="">
-                <div class="car-slide-text"><a href="pages/stock.html">Browse Vehicles</a></div> 
-            </div> 
-            <div class="car-slide"> 
-                <img src="media/porsche-8182100_1280.jpg" alt="car"> 
+            <div class="car-slide">
+                <img src="/media/mclaren-p1-7746386_1280.jpg" alt="Mclaren P1">
+                <div class="car-slide-text"><a href="pages/stock.html">Browse Vehicles</a></div>
+            </div>
+            <div class="car-slide">
+                <img src="media/porsche-8182100_1280.jpg" alt="Porsche">
                 <div class="car-slide-text"><a href="#">About Us</a></div>
             </div>
-            <div class="car-slide"> 
-                <img src="media/car-5548242_1280.jpg" alt="car"> 
+            <div class="car-slide">
+                <img src="media/car-5548242_1280.jpg" alt="Lamborghini">
                 <div class="car-slide-text"><a href="#">Contact Us</a></div>
             </div>
         </div>
@@ -45,7 +53,7 @@
     <div class="info-section">
         <div class="info-text">
             <h2>About Wheels on Fire</h2>
-            <p>Wheels on Fire is a car dealership founded in 2012 by entrepreneur and car businessman John O'Reilly. 
+            <p>Wheels on Fire is a car dealership founded in 2012 by entrepreneur and car businessman John O'Reilly.
                 Wheels on Fire is driven by their passion for these well-tuned machines and wants to help people find
                 the car of their dreams. Discover our fabulous collection of cars here at Wheels on Fire.</p>
         </div>
@@ -59,22 +67,22 @@
     </div>
     <div class="popular-cars-section">
         <div class="popular-car-item">
-            <img src="media/redhuracan.jpg" alt="car">
+            <img src="media/redhuracan.jpg" alt="Lamborghini Huracan">
             <h2>LAMBORGHINI</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum soluta nostrum adipisci quas repellendus 
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum soluta nostrum adipisci quas repellendus
                 iusto labore explicabo.</p>
         </div>
         <div class="popular-car-item">
-            <img src="media/maserati.jpg" alt="car">
+            <img src="media/maserati.jpg" alt="Maserati MC20">
             <h2>MASERATI</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum soluta nostrum adipisci quas repellendus 
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum soluta nostrum adipisci quas repellendus
                 iusto labore explicabo. Blanditiis dolor non rem tenetur neque! Amet, eius dolorum.</p>
         </div>
         <div class="popular-car-item">
-            <img src="media/vanquish.jpg" alt="car">
+            <img src="media/vanquish.jpg" alt="Aston Martin Vanquish">
             <h2>ASTON MARTIN</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum soluta iusto labore explicabo. Blanditiis 
-                tenetur neque! Amet, eius asperiores illum error similique 
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum soluta iusto labore explicabo. Blanditiis
+                tenetur neque! Amet, eius asperiores illum error similique
                 dolorum.</p>
         </div>
     </div>
@@ -83,7 +91,6 @@
         <p>Wheels on Fire | Car Dealership | 2024</p>
     </footer>
 
-    <script src="scripts.js"></script>
 </body>
 
 </html>
