@@ -407,7 +407,7 @@ footer {
 }
 
 /* Large devices (desktops) */
-@media (min-width: 900px) {
+@media (min-width: 1600px) {
     .car-card {
         /* 4 cards per line */
         width: calc((100%/4) - 60px);
@@ -416,7 +416,7 @@ footer {
 }
 
 /* Medium devices (laptops) */
-@media (min-width: 900px) {
+@media (min-width: 900px) and (max-width: 1600px) {
     .car-card {
         /* 3 cards per line */
         width: calc((100%/3) - 60px);
