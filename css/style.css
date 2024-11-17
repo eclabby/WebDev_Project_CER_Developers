@@ -17,6 +17,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     background-color: #0a141f; /* #302823 */
+    z-index: 100;
 }
 
 nav .logo {
