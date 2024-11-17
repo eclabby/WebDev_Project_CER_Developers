@@ -6,166 +6,150 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wheels on Fire | Luxury and Prestige Cars</title>
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
 <body>
     <nav>
-        <div class="logo">Wheels on Fire</div>
+        <a class="logo" href="../index.html">Wheels on Fire</a>
+        <input id="menu" class="menu-check" type="checkbox">
+        <label class="menu-label" for="menu">
+            <div></div>
+            <div></div>
+            <div></div>
+        </label>
         <ul>
-            <li><a href="../index.html">HOME</a></li>
-            <li><a href="stock.html">STOCK</a></li>
-            <li><a href="about.html">ABOUT</a></li>
-            <li><a href="contact.html">CONTACT</a></li>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="stock.html">Stock</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
         </ul>
         <div class="search-bar">
-            <input type="text" placeholder="Search...">
-            <a href="#"><button>Search</button></a>
+            <input type="text" placeholder="Search">
+            <a href="#"><button id="search" aria-label="search"><i class="fas fa-search fa-lg"></i></button></a>
         </div>
+        <div class="overlay"></div>
     </nav>
 
     <div class="car-container">
-            <div class="car-card">
-                <img src="../media/bmwm2.png" alt="Turqoise Bmw M2">
-                <h2>BMW M2</h2>
-                <p>€70,000</p>
-            </div>
-            <div class="car-card">
-                <img src="../media/porsche911.png" alt="Matte Black Porsche 911">
-                <h2>PORSCHE 911</h2>
-                <p>€400,000</p>
-            </div>
-            <div class="car-card">
-                <img src="../media/gwagon.png" alt="Grey Mercedes G-Wagon">
-                <h2>MERCEDES G-WAGON</h2>
-                <p>€230,000</p>
-            </div>
-            <div class="car-card">
-                <img src="../media/rollsroyce.png" alt="White Rolls Royce Phantom">
-                <h2>ROLLS ROYCE PHANTOM</h2>
-                <p>€480,000</p>
-            </div>
-            <div class="car-card">
-                <img src="../media/mclarenspider.png" alt="Silica White Mclaren 720s Spider">
-                <h2>MCLAREN 720S SPIDER</h2>
-                <p>€350,000</p>
-            </div>
-            <div class="car-card">
-                <img src="../media/urus.png" alt="White Lamborghini Urus V8">
-                <h2>LAMBORGHINI URUS V8</h2>
-                <p>€300,000</p>
-            </div>
-            <div class="car-card">
-                <img src="../media/bugatibw.png" alt="Black and White Bugatti Chiron">
-                <h2>BUGATTI CHIRON</h2>
-                <p>€3,000,000</p>
-            </div>
-            <div class="car-card">
-                <img src="../media/pagani.png" alt="Red Pagani Huayra Roadster">
-                <h2>PAGANI HUAYRA ROADSTER</h2>
-                <p>€3,000,000</p>
-            </div>
-            <div class="car-card">
-                <img src="../media/huracan.png" alt="Orange Lamborghini Huracan LP 580-2 Spyder">
-                <h2>LAMBORGHINI HURACAN LP 580-2 SPYDER</h2>
-                <p>€250,000</p>
-            </div>
-            <div class="car-card">
-                <img src="../media/vanquish.png" alt="White Aston Martin Vanquish S Ultimate Editionr">
-                <h2>ASTON MARTIN VANQUISH S ULTIMATE EDITION</h2>
-                <p>€300,000</p>
-            </div>
-            <div class="car-card">
-                <img src="../media/noire.png" alt="Black Bugatti La Voiture Noire">
-                <h2>BUGATTI LA VOITURE NOIRE</h2>
-                <p>€11,000,000</p>
-            </div>
-            <div class="car-card">
-                <img src="../media/bentley2.png" alt="Black Bentley Continental GT V8">
-                <h2>BENTLEY CONTINENTAL CT V8</h2>
-                <p>€250,000</p>
-            </div>
-            <div class="car-card">
-                <img src="../media/maserati.png" alt="Turquoise-grey Maserati MC20 Coupe">
-                <h2>MASERATI MC20 COUPE</h2>
-                <p>€250,000</p>
-            </div>
-            <div class="car-card">
-                <img src="../media/m4.png" alt="Red Bmw M4 G82">
-                <h2>BMW M4 G82</h2>
-                <p>€120,000</p>
-            </div>
-            <div class="car-card">
-                <img src="../media/bugatti-3974383_1280.png" alt="Blue and Black Bugatti Chiron">
-                <h2>BUGATTI CHIRON</h2>
-                <p>€2,800,000</p>
-            </div>
-            <div class="car-card">
-                <img src="../media/corvette.png" alt="Grey Chevrolet Corvette Z06 V8">
-                <h2>CHEVROLET CORVETTE Z06 V8</h2>
-                <p>€150,000</p>
-            </div>
-            <div class="car-card">
-                <img src="../media/brabus.png" alt="Black Mercedes G 63 AMG Brabus with Red Brabus Logo">
-                <h2>MERCEEDS G 63 AMG BRABUS</h2>
-                <p>€250,000</p>
-            </div>
-            <div class="car-card">
-                <img src="../media/redhuracan.png" alt="Red Lamborghini Huracan Performante">
-                <h2>LAMBORGHINI HURACAN PERFORMANTE</h2>
-                <p>€300,000</p>
-            </div>
-            <div class="car-card">
-                <img src="../media/m3.png" alt="White Bmw M3">
-                <h2>BMW M3</h2>
-                <p>€100,000</p>
-            </div>
-            <div class="car-card">
-                <img src="../media/amggtrblck2.png" alt="Full Matte Black Mercedes AMG GT-R">
-                <h2>MERCEDES AMG GT-R</h2>
-                <p>€220,000</p>
-            </div>
-            <div class="car-card">
-                <img src="../media/lambosvj.png" alt="Yellow Lamborghini Aventador SVJ">
-                <h2>LAMBORGHINI AVENTADOR SVJ V12</h2>
-                <p>€500,000</p>
-            </div>
-            <div class="car-card">
-                <img src="../media/stocoupe.png" alt="Gold Lamborghini Huracan Sto Coupe">
-                <h2>LAMBORGHINI HURACAN STO COUPE</h2>
-                <p>€350,000</p>
-            </div>
-            <div class="car-card">
-                <img src="../media/nevera.png" alt="Matte Black Rimac Nevera">
-                <h2>RIMAC NEVERA</h2>
-                <p>€2,000,000</p>
-            </div>
-            <div class="car-card">
-                <img src="../media/f12.png" alt="Red Ferrari F12 Berlinetta">
-                <h2>FERRRARI F12 BERLINETTA</h2>
-                <p>€350,000</p>
-            </div>
-            <div class="car-card">
-                <img src="../media/488pista.png" alt="Red Ferrari 488 Pista">
-                <h2>FERRRARI 488 PISTA</h2>
-                <p>€350,000</p>
-            </div>
-            <div class="car-card">
-                <img src="../media/gallardo.png" alt="Grey Lamborghini Gallardo LP560-4">
-                <h2>LAMBORGHINI GALLARDO LP560-4</h2>
-                <p>€200,000</p>
-            </div>
-            <div class="car-card">
-                <img src="../media/regera.png" alt="White Koenigsegg Regera">
-                <h2>KOENIGSEGG REGERA</h2>
-                <p>€2,500,000</p>
-            </div>
+        <div class="car-card">
+            <img src="../media/m4.jpg" alt="Red Bmw M4 G82">
+            <h2>BMW M4 G82</h2>
+            <p class="price">€120,000</p>
+            <p>car descrition car descrition car descrition car descrition car descrition car descrition </p>
+            <div class="car-card-text"><a href="#">View Details</a></div>
         </div>
+        <div class="car-card">
+            <img src="../media/huracan.jpg" alt="Orange Lamborghini Huracan LP 580-2 Spyder">
+            <h2>LAMBORGHINI HURACAN LP 580-2 SPYDER</h2>
+            <p class="price">€250,000</p>
+            <p>car descrition car descrition car descrition car descrition car descrition car descrition </p>
+            <div class="car-card-text"><a href="#">View Details</a></div>
+        </div>
+        <div class="car-card">
+            <img src="../media/porsche911.jpg" alt="Matte Black Porsche 911">
+            <h2>Porsche 911</h2>
+            <p class="price">€400,000</p>
+            <p>car descrition car descrition car descrition car descrition car descrition car descrition </p>
+            <div class="car-card-text"><a href="#">View Details</a></div>
+        </div>
+        <div class="car-card">
+            <img src="../media/bmwm2.jpg" alt="Turqoise Bmw M2">
+            <h2>BMW M2</h2>
+            <p class="price">€70,000</p>
+            <p>car descrition car descrition car descrition car descrition car descrition car descrition </p>
+            <div class="car-card-text"><a href="#">View Details</a></div>
+        </div>
+        <div class="car-card">
+            <img src="../media/gwagon.jpg" alt="Grey Mercedes G-Wagon">
+            <h2>Mercedes G-Wagon</h2>
+            <p class="price">€230,000</p>
+            <p>car descrition car descrition car descrition car descrition car descrition car descrition </p>
+            <div class="car-card-text"><a href="#">View Details</a></div>
+        </div>
+        <div class="car-card">
+            <img src="../media/rollsroyce.jpg" alt="White Rolls Royce Phantom">
+            <h2>ROLLS ROYCE PHANTOM</h2>
+            <p class="price">€480,000</p>
+            <p>car descrition car descrition car descrition car descrition car descrition car descrition </p>
+            <div class="car-card-text"><a href="#">View Details</a></div>
+        </div>
+        <div class="car-card">
+            <img src="../media/mclarenspider.jpg" alt="Silica White Mclaren 720s Spider">
+            <h2>MCLAREN 720S SPIDER</h2>
+            <p class="price">€350,000</p>
+            <p>car descrition car descrition car descrition car descrition car descrition car descrition </p>
+            <div class="car-card-text"><a href="#">View Details</a></div>
+        </div>
+        <div class="car-card">
+            <img src="../media/urus.jpg" alt="White Lamborghini Urus V8">
+            <h2>LAMBORGHINI URUS V8</h2>
+            <p class="price">€300,000</p>
+            <p>car descrition car descrition car descrition car descrition car descrition car descrition </p>
+            <div class="car-card-text"><a href="#">View Details</a></div>
+        </div>
+        <div class="car-card">
+            <img src="../media/pagani.jpg" alt="Red Pagani Huayra Roadster">
+            <h2>PAGANI HUAYRA ROADSTER</h2>
+            <p class="price">€3,000,000</p>
+            <p>car descrition car descrition car descrition car descrition car descrition car descrition </p>
+            <div class="car-card-text"><a href="#">View Details</a></div>
+        </div>
+        <div class="car-card">
+            <img src="../media/vanquish.jpg" alt="White Aston Martin Vanquish S Ultimate Editionr">
+            <h2>ASTON MARTIN VANQUISH S ULTIMATE EDITION</h2>
+            <p class="price">€300,000</p>
+            <p>car descrition car descrition car descrition car descrition car descrition car descrition </p>
+            <div class="car-card-text"><a href="#">View Details</a></div>
+        </div>
+        <div class="car-card">
+            <img src="../media/bentley.jpg" alt="Black Bentley Continental GT V8">
+            <h2>BENTLEY CONTINENTAL CT V8</h2>
+            <p class="price">€250,000</p>
+            <p>car descrition car descrition car descrition car descrition car descrition car descrition </p>
+            <div class="car-card-text"><a href="#">View Details</a></div>
+        </div>
+        <div class="car-card">
+            <img src="../media/maserati.jpg" alt="Turquoise-grey Maserati MC20 Coupe">
+            <h2>MASERATI MC20 COUPE</h2>
+            <p class="price">€250,000</p>
+            <p>car descrition car descrition car descrition car descrition car descrition car descrition </p>
+            <div class="car-card-text"><a href="#">View Details</a></div>
+        </div>
+        <div class="car-card">
+            <img src="../media/corvette.jpg" alt="Grey Chevrolet Corvette Z06 V8">
+            <h2>CHEVROLET CORVETTE Z06 V8</h2>
+            <p class="price">€150,000</p>
+            <p>car descrition car descrition car descrition car descrition car descrition car descrition </p>
+            <div class="car-card-text"><a href="#">View Details</a></div>
+        </div>
+        <div class="car-card">
+            <img src="../media/redhuracan.jpg" alt="Red Lamborghini Huracan Performante">
+            <h2>LAMBORGHINI HURACAN PERFORMANTE</h2>
+            <p class="price">€300,000</p>
+            <p>car descrition car descrition car descrition car descrition car descrition car descrition </p>
+            <div class="car-card-text"><a href="#">View Details</a></div>
+        </div>
+        <div class="car-card">
+            <img src="../media/m3.jpg" alt="White Bmw M3">
+            <h2>BMW M3</h2>
+            <p class="price">€100,000</p>
+            <p>car descrition car descrition car descrition car descrition car descrition car descrition </p>
+            <div class="car-card-text"><a href="#">View Details</a></div>
+        </div>
+        <div class="car-card">
+            <img src="../media/amggtr.jpg" alt="Full Matte Black Mercedes AMG GT-R">
+            <h2>MERCEDES AMG GT-R</h2>
+            <p class="price">€220,000</p>
+            <p>car descrition car descrition car descrition car descrition car descrition car descrition </p>
+            <div class="car-card-text"><a href="#">View Details</a></div>
+        </div>
+    </div>
 
     <footer>
         <p>Wheels on Fire | Car Dealership | 2024</p>
     </footer>
 
-    <!--<script src="scripts.js"></script>-->
 </body>
 
 </html>
