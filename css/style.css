@@ -393,6 +393,8 @@ footer {
 }
 
 .car-card {
+    display: flex;
+    flex-direction: column;
     background-color: white;
     border: 1px solid gray;
     margin: 20px;
@@ -427,6 +429,7 @@ footer {
     font-size: 1.2em;
     border: 2px solid black;
     margin: 20px;
+    margin-top: auto;
     padding: 10px;
 }
 
