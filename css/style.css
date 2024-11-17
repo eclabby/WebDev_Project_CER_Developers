@@ -364,7 +364,7 @@ button {
     text-align: left;
 }
 
-/* For larger screens must figure out screen size */
+/* For larger screens */
 @media (min-width: 768px) {
     .popular-car-item {
         width: 30%;
