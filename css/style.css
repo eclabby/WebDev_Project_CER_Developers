@@ -5,6 +5,13 @@ html {
     font-family: 'Trebuchet MS', Arial, sans-serif;
 }
 
+button,
+input,
+textarea {
+    margin: 0;
+    font: inherit;
+}
+
 nav {
     display: flex;
     justify-content: space-between;
@@ -274,7 +281,7 @@ button {
 .about-section {
     display: flex;
     margin: 20px;
-    justify-content: flex-start;
+    padding: 0 20px;
 }
 
 .about-text,
@@ -282,43 +289,60 @@ button {
     display: flex;
     flex-direction: column;
     font-size: 1.2em;
-    padding: 0 40px;
+    width: 100%;
 }
 
-.about-profile img {
-    padding-bottom: 20px;
+.about-profile {
+    justify-content: center;
+    align-items: center;
 }
 
-.about-profile h3, h4 {
-    margin: 0;
+.about-profile-card {
+    max-width: 100%;
+}
+
+.about-profile-card img {
+    width: 100%;
+    height: auto;
 }
 
 /* Tablets and Phones */
 @media (max-width: 817px) {
     .about-section {
         flex-direction: column;
+        padding: 0;
     }
 
     .about-text,
     .about-profile {
         width: 100%;
-        padding: 0;
     }
 
     .about-profile {
-        max-width: 400px;
+        align-items: flex-start;
+    }
+
+    .about-profile-card {
+        max-width: 50%;
     }
 }
+
+@media (max-width: 700px) {
+    .about-profile-card {
+        max-width: 500px;
+    }
+}
+
 
 /* Laptops and Desktops */
 @media (min-width: 817px) {
     .about-text,
     .about-profile {
-        width: 45%;
+        width: 50%;
     }
 
-    .about-profile {
-        max-width: 30vw;
+    .about-profile-card {
+        max-width: 50%;
     }
 }
 
@@ -446,22 +470,17 @@ footer {
 
 /*robert part ends*/
 
-/* BAD DESIGN CONTACT REDO */
-
 .contact-section {
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
     margin: 20px;
-    padding: 0 40px;
+    padding: 0 20px;
     font-size: 1.2em;
-    height: 100vh;
 }
 
 .contact-form {
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 100%;
 }
 
 .contact-form label {
@@ -476,8 +495,19 @@ footer {
 /* Tablets and Phones */
 @media (max-width: 817px) {
     .contact-section {
+        flex-direction: column;
         padding: 0;
+    }
+
+    .contact-form {
+        width: 100%;
     }
 }
 
-/* BAD DESIGN CONTACT REDO */
+/* Laptops and Desktops */
+@media (min-width: 817px) {
+    .contact-form,
+    .contact-section img {
+        width: 50%;
+    }
+}
