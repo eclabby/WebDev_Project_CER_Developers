@@ -7,7 +7,8 @@ html {
 
 button,
 input,
-textarea {
+textarea,
+select {
     margin: 0;
     font: inherit;
 }
@@ -84,7 +85,8 @@ nav ul li a:hover {
 
 input,
 button,
-textarea {
+textarea,
+select {
     padding: 10px;
     border: solid 2px gray;
 }
