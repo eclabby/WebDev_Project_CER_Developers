@@ -32,35 +32,37 @@
     </nav>
 
     <div class="contact-section">
-        <div class="contact-form">
+        <form class="contact-form" onsubmit="return validateForm()">
             <h2>Contact Us</h2>
             <p>If you wish to contact us please enter a message below.</p>
             <label for="fname">First Name</label>
             <input type="text" id="fname" name="firstname" placeholder="First Name">
-
+        
             <label for="lname">Last Name</label>
             <input type="text" id="lname" name="lastname" placeholder="Last Name">
-
+        
             <label for="email">Email</label>
-            <input type="text" id="email" placeholder="Email address">
-
+            <input type="email" id="email" placeholder="Email address">
+        
             <label for="dropdown">Reason for Inquiry</label>
             <select name="dropdown" id="dropdown" placeholder="Options">
                 <option value="general">General</option>
                 <option value="feedback">Feedback</option>
-                <option value="techsupport">Technical support</option>
+                <option value="techsupport">Technical Support</option>
             </select>
-
+        
             <label for="message">Ask us a question</label>
             <textarea name="message" id="message" placeholder="Message"></textarea>
-
-            <a href="#"><button id="submit">Submit</button></a>
-        </div>
+        
+            <input type="submit" value="Submit" id="submit">
+        </form>
     </div>
 
     <footer>
         <p>Wheels on Fire | Car Dealership | 2024</p>
     </footer>
+
+    <script src="../javascript/scripts.js"></script>
 
 </body>
 

@@ -91,7 +91,8 @@ select {
     border: solid 2px gray;
 }
 
-button {
+button,
+#submit {
     background-color: #302823;
     color: white;
     cursor: pointer;
