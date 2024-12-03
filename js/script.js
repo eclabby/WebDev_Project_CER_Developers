@@ -68,14 +68,14 @@ function validateForm(event)
     const email = document.getElementById('email').value.trim();
     const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
     if (email === "") {
-        document.getElementById('emailerror').textContent = "Email Address is required.";
+        document.getElementById('emailerror').textContent = "An email address is required.";
         isValid = false;
     } else if (!emailPattern.test(email)) {
         document.getElementById('emailerror').textContent = "Please enter a valid email address.";
         isValid = false;
     }
 
-    // Validates reason for inquiry
+    // Validates reason for inquiry dropdown menu
     const dropdown = document.getElementById('dropdown').value;
     if (!dropdown) {
         document.getElementById('dropdownerror').textContent = "Please select a reason for your inquiry.";
@@ -85,7 +85,7 @@ function validateForm(event)
     // Validates message
     const message = document.getElementById('message').value.trim();
     if (message === "") {
-        document.getElementById('messageerror').textContent = "Message is required.";
+        document.getElementById('messageerror').textContent = "A message is required.";
         isValid = false;
     }
 
