@@ -6,24 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wheels on Fire | Luxury and Prestige Cars</title>
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
 <body>
     <nav>
-        <div class="logo">Wheels on Fire</div>
+        <a class="logo" href="../index.html">Wheels on Fire</a>
+        <input id="menu" class="menu-check" type="checkbox">
+        <label class="menu-label" for="menu">
+            <div></div>
+            <div></div>
+            <div></div>
+        </label>
         <ul>
-            <li><a href="../index.html">HOME</a></li>
-            <li><a href="stock.html">STOCK</a></li>
-            <li><a href="about.html">ABOUT</a></li>
-            <li><a href="contact.html">CONTACT</a></li>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="stock.html">Stock</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
         </ul>
         <div class="search-bar">
-            <input type="text" placeholder="Search...">
-            <a href="#"><button>Search</button></a>
+            <input type="text" placeholder="Search">
+            <a href="#"><button id="search" aria-label="search"><i class="fas fa-search fa-lg"></i></button></a>
         </div>
+        <div class="overlay"></div>
     </nav>
 
     <div class="contact-section">
+<<<<<<< HEAD
         <div class="contact-title">
             <h1>Contact Information</h1>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates, vel.
@@ -38,6 +47,49 @@
             <label for="subject">Ask us a question</label>
             <textarea name="subject" id="subject" placeholder="Type here"></textarea>
             <button class="submit_btn"><a href="#">Submit</a></button>
+=======
+        <div class="contact-form">
+            <h2>Contact Us</h2>
+            <p>If you wish to contact us please complete the form below:</p>
+
+            <form id="contact-form" onsubmit="validateForm(event)">
+                <!--First Name-->
+                <label for="firstname">First Name</label>
+                <input type="text" id="firstname" name="firstname" placeholder="First Name">
+                <div id="firstnameerror" class="error"></div>
+
+                <!--Last Name-->
+                <label for="lastname">Last Name</label>
+                <input type="text" id="lastname" name="lastname" placeholder="Last Name">
+                <div id="lastnameerror" class="error"></div>
+
+                <!--Email Address-->
+                <label for="email">Email</label>
+                <input type="text" id="email" placeholder="Email Address">
+                <div id="emailerror" class="error"></div>
+
+                <!--Reason for Inquiry-->
+                <label for="inquiryreason">Reason for Inquiry:</label>
+                <select id="inquiryreason" name="inquiryreason">
+                    <option value="">Select Reason</option>
+                    <option value="general">General</option>
+                    <option value="feedback">Feedback</option>
+                    <option value="technicalsupport">Technical Support</option>
+                </select>
+                <div id="inquiryreasonerror" class="error"></div>
+
+                <!--Message-->
+                <label for="message">Message:</label>
+                <textarea name="message" id="message" placeholder="Message"></textarea>
+                <div id="messageerror" class="error"></div>
+
+                <button type="submit" id="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+>>>>>>> Robertsabaumance
         </div>
     </div>
 
@@ -45,7 +97,6 @@
         <p>Wheels on Fire | Car Dealership | 2024</p>
     </footer>
 
-    <!--<script src="scripts.js"></script>-->
 </body>
 
 </html>

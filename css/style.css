@@ -5,12 +5,19 @@ html {
     font-family: 'Trebuchet MS', Arial, sans-serif;
 }
 
+button,
+input,
+textarea {
+    margin: 0;
+    font: inherit;
+}
+
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #0a141f; /* #302823 */
-    padding: 10px 20px;
+    z-index: 100;
 }
 
 nav .logo {
@@ -18,6 +25,28 @@ nav .logo {
     font-size: 2em;
     font-family: 'Trebuchet MS', Arial, sans-serif;
     font-weight: bold;
+    text-decoration: none;
+    margin: 10px;
+    padding: 10px;
+}
+
+.menu-check {
+    display: none;
+}
+
+.menu-label {
+    display: none;
+    cursor: pointer;
+    margin: 20px;
+    z-index: 6;
+}
+
+.menu-label div {
+    width: 33px;
+    height: 4px;
+    background-color: white;
+    margin: 5px;
+    border-radius: 5px;
 }
 
 nav ul {
@@ -25,12 +54,10 @@ nav ul {
     display: flex;
     justify-content: center;
     flex-grow: 1;
-    margin: 0;
-    padding: 0;
 }
 
 nav ul li {
-    margin: 0 20px;
+    margin: 0 2px;
 }
 
 nav ul li a {
@@ -40,21 +67,90 @@ nav ul li a {
 }
 
 nav ul li a {
-    transition: 0.2s ease-in-out;
+    transition: 0.3s ease;
+    padding: 10px 25px;
+    border: solid 1px transparent;
 }
 
 nav ul li a:hover {
-    color: blue;
-    text-decoration: underline;
+    border: solid 1px white;
 }
 
-nav .search-bar {
+.search-bar {
     margin-left: auto;
+    border-radius: 5px;
+    padding: 20px;
 }
 
-nav .search-bar input {
-    padding: 5px;
-    font-size: 1em;
+input,
+button,
+textarea {
+    padding: 10px;
+    border: solid 2px gray;
+}
+
+button {
+    background-color: #302823;
+    color: white;
+    cursor: pointer;
+}
+
+.overlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 4;
+}
+
+/* Phones */
+@media screen and (max-width: 817px) {
+    .menu-label {
+        display: block;
+    }
+
+    .search-bar {
+        display: none;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        position: absolute;
+        height: 100vh;
+        width: 100%;
+        top: 0;
+        left: 0;
+        padding: 0;
+        background-color: black;
+        z-index: 5;
+    }
+
+    nav ul li {
+        padding: 20px 0;
+    }
+
+    .menu-check:checked~ul {
+        display: flex;
+    }
+
+    .menu-check:checked~.overlay {
+        display: block;
+    }
+}
+
+/* Tablets */
+@media screen and (min-width: 500px) and (max-width: 817px) {
+    nav ul {
+        width: 33%;
+        left: auto;
+        right: 0;
+    }
 }
 
 .car-slider {
@@ -98,24 +194,20 @@ nav .search-bar input {
     z-index: 1;
 }
 
-.car-slide-text {
+.car-slide-text a {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    display: block;
     font-size: 3em;
-    color: white;
-    text-align: center;
-    z-index: 2;
-}
-
-.car-slide-text a {
-    font-family: 'Trebuchet MS', Arial, sans-serif;
     font-weight: bold;
     color: white;
-    padding: 10px;
-    border: solid 5px white;
     text-decoration: none;
+    text-align: center;
+    border: solid 5px white;
+    padding: 10px;
+    z-index: 2;
 }
 
 .prev,
@@ -123,29 +215,35 @@ nav .search-bar input {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.6);
+    font-size: 1.5em;
     color: white;
     border: none;
     padding: 10px;
     cursor: pointer;
+    z-index: 4;
 }
 
 .prev {
-    left: 10px;
+    left: 0;
 }
 
 .next {
-    right: 10px;
+    right: 0;
 }
 
 .info-section {
     display: flex;
-    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
 }
 
-.info-text {
-    width: 45%;
-    padding: 50px;
+.info-text,
+.info-image {
+    width: 100%;
+    margin: 20px;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -156,16 +254,97 @@ nav .search-bar input {
     margin-top: 0;
 }
 
-.info-image {
-    width: 45%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.info-image img {
+    width: 100%;
+    height: auto;
 }
 
-.info-image img {
+/* Small Devices (Tablets and Phones) */
+@media (max-width: 817px) {
+    .info-section {
+        flex-direction: column;
+    }
+
+    .info-text,
+    .info-image {
+        width: 100%;
+    }
+}
+
+/* Large Devices (Laptops and Desktops) */
+@media (min-width: 817px) {
+    .info-text,
+    .info-image {
+        width: 45%;
+    }
+}
+
+.about-section {
+    display: flex;
+    margin: 20px;
+    padding: 0 20px;
+}
+
+.about-text,
+.about-profile {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.2em;
+    width: 100%;
+}
+
+.about-profile {
+    justify-content: center;
+    align-items: center;
+}
+
+.about-profile-card {
     max-width: 100%;
+}
+
+.about-profile-card img {
+    width: 100%;
     height: auto;
+}
+
+/* Tablets and Phones */
+@media (max-width: 817px) {
+    .about-section {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .about-text,
+    .about-profile {
+        width: 100%;
+    }
+
+    .about-profile {
+        align-items: flex-start;
+    }
+
+    .about-profile-card {
+        max-width: 50%;
+    }
+}
+
+@media (max-width: 700px) {
+    .about-profile-card {
+        max-width: 500px;
+    }
+}
+
+
+/* Laptops and Desktops */
+@media (min-width: 817px) {
+    .about-text,
+    .about-profile {
+        width: 50%;
+    }
+
+    .about-profile-card {
+        max-width: 50%;
+    }
 }
 
 .popular-cars-title {
@@ -175,14 +354,22 @@ nav .search-bar input {
 
 .popular-cars-section { /* discovery-section rename? */
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
-    padding: 20px 80px;
+    padding: 20px;
 }
 
 .popular-car-item {
-    width: 30%;
-    padding: 20px;
+    width: 100%;
+    padding: 20px 0;
     text-align: left;
+}
+
+/* For larger screens */
+@media (min-width: 768px) {
+    .popular-car-item {
+        width: 30%;
+    }
 }
 
 .popular-car-item img {
@@ -200,18 +387,20 @@ footer {
 /*robert part starts*/
 
 .car-container {
-    display: flex; 
+    display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: center;/*flex-start;*//*aligns on the new line form the left*/
     width: 100%;
 }
 
 .car-card {
+    display: flex;
+    flex-direction: column;
     background-color: white;
-    border: 1px solid grey;
+    border: 1px solid gray;
     margin: 20px;
     padding: 0;
-    width: calc((100%/6) - 10px); /* 6 cards per line*/
+    width: 100%;
     overflow: hidden;
 }
 
@@ -225,13 +414,13 @@ footer {
     transform: scale(1.1);
 }
 
-.car-card h2, 
+.car-card h2,
 .car-card p {
     margin: 10px;
     padding: 0 20px;
 }
 
-.price  {
+.price {
     font-size: 1.8em;
     font-weight: bold;
 }
@@ -241,6 +430,7 @@ footer {
     font-size: 1.2em;
     border: 2px solid black;
     margin: 20px;
+    margin-top: auto;
     padding: 10px;
 }
 
@@ -249,50 +439,109 @@ footer {
     color: black;
 }
 
-/* Medium to large devices (desktops) */
-@media (min-width: 801px) {
+/* Large devices (desktops) */
+@media (min-width: 1600px) {
     .car-card {
-        width: calc((100%/4) - 10px); /* 6 cards per line (changed to 4 temporarily */
+        /* 4 cards per line */
+        width: calc((100%/4) - 60px);
+
+    }
+}
+
+/* Medium devices (laptops) */
+@media (min-width: 900px) and (max-width: 1600px) {
+    .car-card {
+        /* 3 cards per line */
+        width: calc((100%/3) - 60px);
     }
 }
 
 /* Tablets */
-@media (max-width: 800px) and (min-width: 600px) {
+@media (max-width: 900px) and (min-width: 600px) {
     .car-card {
-        width: calc((100% / 4) - 10px); /* 4 cards per line */
+        /* 2 cards per line */
+        width: calc((100% / 2.5));
     }
 }
 
 /* Phones */
 @media (max-width: 600px) {
     .car-card {
-        flex: 0 1 calc(100% - 20px); /* 1 card per line */
+        /* 1 card per line */
+        flex: 0 1 calc(100% - 20px);
     }
 }
 
 /*robert part ends*/
 
-/* BAD DESIGN CONTACT REDO */
-
 .contact-section {
     display: flex;
-    height: 50vh;
-    justify-content: center;
-}
-
-.contact-title {
-    display: flex;
+    /*added by robert*/
     flex-direction: column;
-    width: 40%;
     justify-content: center;
-    padding: 50px;
+    align-items: center;
+    /*added by robert*/
+    margin: 20px;
+    padding: 0 20px;
+    font-size: 1.2em;
 }
 
 .contact-form {
     display: flex;
     flex-direction: column;
-    width: 40%;
-    justify-content: center;
+    width: 100%;
 }
 
-/* BAD DESIGN CONTACT REDO */
+.contact-form label {
+    padding: 10px 0;
+}
+
+#submit {
+    margin: 20px 0;
+    padding: 10px 20px;
+}
+
+/* Tablets and Phones */
+@media (max-width: 817px) {
+    .contact-section {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .contact-form {
+        width: 100%;
+    }
+}
+
+/* Laptops and Desktops */
+@media (min-width: 817px) {
+    .contact-form,
+    .contact-section img {
+        width: 50%;
+    }
+}
+
+/*Robert Part Starts*/
+/*For error styling in form*/
+.error {
+    color: red;
+    font-size: 20px;
+    margin-top: 5px;
+}
+
+input, textarea, select {
+    margin-bottom: 10px;
+}
+
+button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #45a049;
+}
+/*Ends*/
