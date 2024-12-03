@@ -519,3 +519,10 @@ footer {
         width: 50%;
     }
 }
+
+/*For error styling in form*/
+.error {
+    color: red;
+    font-size: 20px;
+    margin-top: 5px;
+}
