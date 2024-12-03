@@ -1,96 +1,52 @@
-/*
+function validateForm(event) {
 
-function validateForm() {
-    let fname = document.getElementById("fname").value;
-    let lname = document.getElementById("lname").value;
-    let email = document.getElementById("email").value;
-    let message = document.getElementById("message").value;
-
-    let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    
-
-    if (fname === '') {
-        alert("First Name field required");
-        return false;
-    }
-
-    if (lname === '') {
-        alert("Last Name field required");
-        return false;
-    }
-
-    if (email === '') {
-        alert("Email field required");
-        return false;
-    }
-
-    if (message === '') {
-        alert("Please enter a message");
-        return false;
-    }
-
-    if (!emailRegex.test(email)) {
-        alert("Please enter a valid email address");
-        return false;
-    }
-
-    return true;
-}
-
-*/
-
-// Function to validate the form
-function validateForm(event) 
-{
-    event.preventDefault(); // Prevent form submission
+    event.preventDefault();
 
     let isValid = true;
-
-    // Resets previous errors
+    
     const errors = document.querySelectorAll('.error');
     errors.forEach(error => error.textContent = "");
 
-    // Validates first name
-    const fname = document.getElementById('fname').value.trim();
+    let fname = document.getElementById('fname').value;
+    let lname = document.getElementById('lname').value;
+    let email = document.getElementById('email').value;
+    let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    let dropdown = document.getElementById('dropdown').value;
+    let message = document.getElementById('message').value;
+
+    // Validations
     if (fname === "") {
         document.getElementById('fnameerror').textContent = "First Name is required.";
         isValid = false;
     }
 
-    // Validates last name
-    const lname = document.getElementById('lname').value.trim();
     if (lname === "") {
         document.getElementById('lnameerror').textContent = "Last Name is required.";
         isValid = false;
     }
 
-    // Validates email address
-    const email = document.getElementById('email').value.trim();
-    const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
     if (email === "") {
         document.getElementById('emailerror').textContent = "An email address is required.";
         isValid = false;
-    } else if (!emailPattern.test(email)) {
+    } 
+    else if (!emailRegex.test(email)) {
         document.getElementById('emailerror').textContent = "Please enter a valid email address.";
         isValid = false;
     }
 
-    // Validates reason for inquiry dropdown menu
-    const dropdown = document.getElementById('dropdown').value;
     if (!dropdown) {
         document.getElementById('dropdownerror').textContent = "Please select a reason for your inquiry.";
         isValid = false;
     }
 
-    // Validates message
-    const message = document.getElementById('message').value.trim();
     if (message === "") {
         document.getElementById('messageerror').textContent = "A message is required.";
         isValid = false;
     }
 
-    // If the form is valid, submit it
     if (isValid) {
-        alert("Form submitted successfully!");
+        alert("Form submitted successfully");
+        document.querySelector('.contact-form').reset();
+        document.querySelector('.contact-form').submit();
     }
 }
