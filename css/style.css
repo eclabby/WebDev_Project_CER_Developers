@@ -393,7 +393,9 @@ footer {
 .car-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;/*flex-start;*//*aligns on the new line form the left*/
+    justify-content: center;
+    /*flex-start;*/
+    /*aligns on the new line form the left*/
     width: 100%;
 }
 
