@@ -411,7 +411,7 @@ footer {
     font-weight: bold;
 }
 
-.car-card-text {
+.car-card a {
     text-align: center;
     font-size: 1.2em;
     border: 2px solid black;
@@ -420,7 +420,7 @@ footer {
     padding: 10px;
 }
 
-.car-card-text a {
+.car-card a {
     text-decoration: none;
     color: black;
 }
